@@ -52,17 +52,100 @@ html {
   }
 
   body {
-    font-family: 'Inter', Verdana, sans-serif; 
+    font-family: 'Inter', Verdana, sans-serif;
     font-weight: normal;
+    background-color: rgb(221, 221, 226);
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 3vw;
     font-weight: 800;
+    text-align: left;
+    padding-bottom: 3%;
+    color:black
   }
 
-  .accordion-wrapper {
-      max-width: 70%;
-      margin: 0 auto;
-      background-color: rgb(145, 145, 165);
+h2 {
+    font-size: 2vw;
+    font-weight: 600;
+    padding: 4% 0;
+    color: #3030eb;
+    transition: .5s;
+}
+
+ .bottom-border {
+    background-color: #c8c1c1;
+    display: block;
+    height: 0.05em;
+    width: 100%;
+ }
+
+  .wrapper {
+    padding: 5%;
+    cursor: pointer;
+    max-width: 90%;
+    margin: 0 auto;
   }
+
+  .wrapper:hover h2 {
+    color: black;
+  }
+
+  .wrapper:hover .icon {
+    opacity: 1;
+  }
+
+  .accordion__item {
+    cursor: pointer;
+  }
+
+  label input {
+    -webkit-appearance: none;
+}
+
+  label input {
+    display: flex;
+    align-items: center;
+}
+
+.accordion__content {
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+label input:checked ~ 
+.accordion__content {
+    height: 23rem;
+    margin: 1% 0;
+}
+
+label input:checked ~ 
+.title__container h2 {
+  color: black;
+}
+
+label input:checked ~ 
+.title__container .icon {
+  transform: rotate(45deg);
+}
+
+
+.title__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  opacity: 0;
+  background-image: url("assets/icons/plus-solid.svg");
+  width: 1.5em;
+  height: 1.5em;
+  background-size: 1.5em 1.5em;
+  transform: rotate(0deg);
+  transition: .5s;
+}
