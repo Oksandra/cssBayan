@@ -1,0 +1,305 @@
+/*Normalize*/
+
+*{padding: 0;margin: 0;border: 0;}
+*{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+button{cursor: pointer;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+img {
+  max-width: 100%;
+  height: auto;
+}  
+html {
+  scroll-behavior: smooth;
+}
+/*--------------------*/
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/inter-v12-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('assets/fonts/inter-v12-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/inter-v12-latin-600.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    src: url('assets/fonts/inter-v12-latin-800.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('assets/fonts/inter-v12-latin-800.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  body {
+    font-family: 'Inter', Verdana, sans-serif;
+    font-weight: normal;
+    background-color: rgb(240 238 214);
+  }
+
+  h1 {
+    font-size: 3.5vw;
+    font-weight: 800;
+    text-align: left;
+    padding-bottom: 3%;
+    color:black
+  }
+
+h2 {
+    font-size: 2.5vw;
+    font-weight: 600;
+    padding: 4% 0;
+    color: #3030eb;
+    transition: .5s;
+}
+
+.bottom-border {
+  background-color: #c8c1c1;
+  display: block;
+  height: 0.05em;
+  width: 100%;
+}
+
+.wrapper {
+  padding: 5%;
+  cursor: pointer;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.accordion__item {
+  cursor: pointer;
+}
+
+.icon {
+  background-image: url("assets/icons/plus-solid.svg");
+  width: 2vw;
+  height: 2vw;
+  background-size: 2vw 2vw;
+  transform: rotate(0deg);
+  transition: .3s;
+}
+
+label input {
+  appearance: none;
+}
+
+label input {
+  display: flex;
+  align-items: center;
+}
+
+.accordion__content {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+label input:checked ~ 
+.title__container h2 {
+color: black;
+}
+
+label input:checked ~ 
+.accordion__content {
+  height: 14rem;
+  margin: 1% 0;
+}
+
+label input:checked ~ 
+.title__container .icon {
+transform: rotate(45deg);
+}
+
+.title__container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+@media screen and (min-width: 320px) {
+
+ label input:checked ~ 
+ .accordion__content {
+   height: 18rem;
+   margin: 1% 0;
+ }
+
+ .icon {
+  opacity: 1;
+ }
+}
+
+@media screen and (min-width: 820px) {
+
+ label input:checked ~ 
+ .accordion__content {
+  height: 18em;
+  margin: 1% 0;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .icon {
+    opacity: 0;
+   }
+
+  @media (hover:hover) {
+    .wrapper:hover h2 {
+      color: black;
+    }
+  }
+
+  @media (hover:hover) {
+    .wrapper:hover .icon {
+      opacity: 1;
+    }
+  }
+
+  @media (hover:hover) {
+    .accordion__item:hover 
+    .title__container .icon {
+    transform: rotate(45deg);
+    }  
+  }
+
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 23rem;
+      margin: 1% 0;
+    }
+  }
+
+  label input:checked ~ 
+    .accordion__content {
+      height: 23rem;
+      margin: 1% 0;
+  }
+
+  .accordion__item:active 
+.title__container .icon {
+  filter: invert(8%) sepia(100%) saturate(6481%) hue-rotate(246deg) brightness(102%) contrast(143%);
+} 
+
+.accordion__item:active 
+.title__container .title {
+  color: #3030eb;
+} 
+
+.accordion__item:active 
+.accordion__content .image {
+  filter: brightness(1.1);
+} 
+}
+
+@media screen and (min-width: 1200px) {
+
+  .image {
+    width: 40%;
+  }
+
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 28rem;
+      margin: 1% 0;
+    }
+  }
+
+  label input:checked ~ 
+    .accordion__content {
+      height: 28rem;
+      margin: 1% 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  .image {
+    width: 40%;
+  }
+
+ h2 {
+  padding: 2% 0;
+ }
+
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 35rem;
+      margin: 1% 0;
+    }
+  }
+
+  label input:checked ~ 
+    .accordion__content {
+      height: 35rem;
+      margin: 1% 0;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 40rem;
+      margin: 1% 0;
+    }
+}
+
+  label input:checked ~ 
+    .accordion__content {
+      height: 40rem;
+      margin: 1% 0;
+}
+}
+
+@media screen and (min-width: 1920px) {
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 43rem;
+      margin: 1% 0;
+    }
+}
+
+  label input:checked ~ 
+    .accordion__content {
+      height: 43rem;
+      margin: 1% 0;
+}
+}
+
+
+
+ 
+
+
+
+
+
