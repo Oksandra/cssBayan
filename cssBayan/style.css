@@ -90,7 +90,6 @@ h2 {
 }
 
 .icon {
-  opacity: 0;
   background-image: url("assets/icons/plus-solid.svg");
   width: 2vw;
   height: 2vw;
@@ -159,6 +158,10 @@ align-items: center;
    height: 18rem;
    margin: 1% 0;
  }
+
+ .icon {
+  opacity: 1;
+ }
 }
 
 @media screen and (min-width: 820px) {
@@ -171,6 +174,10 @@ align-items: center;
 }
 
 @media screen and (min-width: 1024px) {
+
+  .icon {
+    opacity: 0;
+   }
 
   @media (hover:hover) {
     .wrapper:hover h2 {
