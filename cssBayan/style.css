@@ -141,6 +141,7 @@ justify-content: space-between;
 align-items: center;
 }
 
+
 .accordion__item:active 
 .title__container .icon {
   filter: invert(8%) sepia(100%) saturate(6481%) hue-rotate(246deg) brightness(102%) contrast(143%);
@@ -155,60 +156,122 @@ align-items: center;
 
 @media screen and (min-width: 320px) {
 
-
-  label input:checked ~ 
-.accordion__content {
-  height: 18rem;
-  margin: 1% 0;
+ label input:checked ~ 
+ .accordion__content {
+   height: 18rem;
+   margin: 1% 0;
+ }
 }
-  }
 
-  @media screen and (min-width: 820px) {
+@media screen and (min-width: 820px) {
 
-    label input:checked ~ 
-.accordion__content {
+ label input:checked ~ 
+ .accordion__content {
   height: 18em;
   margin: 1% 0;
+ }
 }
 
+@media screen and (min-width: 1024px) {
+
+  @media (hover:hover) {
+    .wrapper:hover h2 {
+      color: black;
     }
+  }
 
-  @media screen and (min-width: 1024px) {
-
-    @media (hover:hover) {
-      .wrapper:hover h2 {
-        color: black;
-      }
+  @media (hover:hover) {
+    .wrapper:hover .icon {
+      opacity: 1;
     }
+  }
 
-    @media (hover:hover) {
-      .wrapper:hover .icon {
-        opacity: 1;
-      }
-      }
+  @media (hover:hover) {
+    .accordion__item:hover 
+    .title__container .icon {
+    transform: rotate(45deg);
+    }  
+  }
 
-      @media (hover:hover) {
-        .accordion__item:hover 
-     .title__container .icon {
-     transform: rotate(45deg);
-} 
-      }
-
-      @media (hover:hover) {
-        .accordion__item:hover
-        .accordion__content {
-        height: 23rem;
-        margin: 1% 0;
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 23rem;
+      margin: 1% 0;
     }
-          }
+  }
 
-        label input:checked ~ 
-          .accordion__content {
-            height: 23rem;
-            margin: 1% 0;
-          }
+  label input:checked ~ 
+    .accordion__content {
+      height: 23rem;
+      margin: 1% 0;
+  }
+}
 
+@media screen and (min-width: 1200px) {
+
+  .image {
+    width: 40%;
+  }
+
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 28rem;
+      margin: 1% 0;
     }
+  }
+
+  label input:checked ~ 
+    .accordion__content {
+      height: 28rem;
+      margin: 1% 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  .image {
+    width: 40%;
+  }
+
+ h2 {
+  padding: 2% 0;
+ }
+
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 35rem;
+      margin: 1% 0;
+    }
+  }
+
+  label input:checked ~ 
+    .accordion__content {
+      height: 35rem;
+      margin: 1% 0;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+
+  @media (hover:hover) {
+    .accordion__item:hover
+    .accordion__content {
+      height: 40rem;
+      margin: 1% 0;
+    }
+}
+
+  label input:checked ~ 
+    .accordion__content {
+      height: 40rem;
+      margin: 1% 0;
+}
+}
+
+
 
  
 
